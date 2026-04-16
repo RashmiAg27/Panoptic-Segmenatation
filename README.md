@@ -24,22 +24,26 @@ This project introduces a **context-aware data hiding approach** using DETR (DEt
 ---
 
 ## 🏗️ Pipeline
-Input Image
-↓
-Panoptic Segmentation (DETR)
-↓
-Region Selection (Largest / Dense Segment)
-↓
-Message → AES Encryption
-↓
-Prime-indexed LSB Embedding
-↓
-Stego Image
-↓
-(Decoding)
-↓
-Re-segmentation → Region Identification → Data Extraction → Decryption
 
+Cover Image  
+↓  
+Panoptic Segmentation (DETR - ResNet-101)  
+↓  
+Semantic Region Selection (High-density segment)  
+↓  
+Message → AES-256 Encryption  
+↓  
+Prime-indexed LSB Embedding  
+↓  
+Stego Image  
+↓  
+(Decoding)  
+↓  
+Re-segmentation → Region Alignment  
+↓  
+LSB Extraction (Prime positions)  
+↓  
+AES Decryption → Original Message  
 
 ---
 
